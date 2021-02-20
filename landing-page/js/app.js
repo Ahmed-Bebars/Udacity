@@ -17,6 +17,10 @@
  * Define Global Variables
  * 
 */
+function scrollsection (scroll){
+    console.log(scroll);
+    scroll.scrollIntoView();
+};
 document.addEventListener('DOMContentLoaded', (event) => {
     const sectionlist = document.getElementsByClassName('landing__container');
     const navlist = document.getElementById('navbar__list');
@@ -47,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let windowCenterHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) / 2;
         let sections = document.getElementsByTagName('section');
         let navid = document.getElementsByTagName('li');
-        sections[0].getAttribute('id')
+        //sections[0].getAttribute('id')
         let closestDiv = sections[0];
         let closestnav = navid[0];
         let closestDist = Number.POSITIVE_INFINITY;
@@ -79,19 +83,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     };
     //TOP function
     topbutton.addEventListener("click", function (){
-        console.log(event)
+        //console.log(event)
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       });
-
     // build the nav
     for (let list = 0; list < navarraylength; list++) {
         let sectiontxt = sectionlist[list].getElementsByTagName('h2')[0].innerText;
         let newsection = document.createElement('li');
         newsection.className = ('menu__link');
-        newsection.innerHTML = `<a href="#${sectiontxt.toLowerCase().replace(/\s/g, '')}">` + sectiontxt + `</a>`;
+        let scroll = document.getElementsByTagName('section')[list].id;
+        //newsection.innerHTML = `<a href="#${sectiontxt.toLowerCase().replace(/\s/g, '')}">` + sectiontxt + `</a>`;
+        newsection.innerHTML = `<a onclick='return scrollsection(${scroll})'>` + sectiontxt + `</a>`;
         navlist.appendChild(newsection);
     };
+
 
     // Add class 'active' to section when near top of viewport
     // Scroll to anchor ID using scrollTO event
