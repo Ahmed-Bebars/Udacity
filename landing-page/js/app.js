@@ -19,7 +19,7 @@
 */
 function scrollsection (scroll){
     console.log(scroll);
-    scroll.scrollIntoView();
+    scroll.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 };
 document.addEventListener('DOMContentLoaded', (event) => {
     const sectionlist = document.getElementsByClassName('landing__container');
