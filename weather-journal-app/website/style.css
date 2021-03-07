@@ -1,0 +1,191 @@
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+#app {
+    align-items: stretch;
+    background: transparent;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+    width: 50vw;
+}
+#zip {
+    align-items: stretch;
+    background: transparent;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+    
+
+}
+.myInput {
+    align-items: stretch;
+    background: transparent;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 90%;
+    max-width: 90%;
+    max-height: 100px;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+    
+
+}
+@media (min-width: 768px) {
+    #app {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "headline headline" "form entry";
+        height: 100vh;
+    }
+}
+button {
+    border: none;
+    justify-content: center;
+    text-align: center;
+    background: #009ad8;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white; }
+.entry {
+    background: rgba(59, 74, 107, .4);
+    grid-area: entry;
+    margin-bottom: 30px;
+}
+
+form {
+    grid-area: form;
+    display: grid;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    grid-gap: 10px;
+}
+
+#entryHolder {
+    padding: 15px;
+}
+
+#date::before {
+    content: "Date : ";
+}
+#city::before {
+    content: "City : ";
+}
+#temp::before {
+    content: "Temperature : ";
+}
+
+#content::before {
+    content: "You're feeling ";
+}
+
+.headline {
+    display: grid;
+    grid-area: headline;
+    align-self: center;
+    justify-content: center;
+}
+
+.title {
+    display: inline-flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+label {
+    display: block;
+    font-size: 24px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+
+button.invalid {
+    cursor: not-allowed;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+textarea {
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
