@@ -1,7 +1,7 @@
 # Weather-Journal App Project
 dependencies package:                                                                                                                                                               
     -body-parser: 1.19.0                                                                                                                                                           
-    -cors: 2.8.5
+    -cors: 2.8.5                                                                                                                                                                   
     -express: 4.17.1                                                                                                                                                           
 Application Version 1.0.0                                                                                                                                                           
 description: A simple project to test Asynchronous API calls                                                                                                                       
